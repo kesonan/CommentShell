@@ -1,5 +1,7 @@
 # CommentShell
 
+[![release](https://img.shields.io/badge/release-1.0.0-brightgreen)](https://github.com/anqiansong/CommentShell/releases)
+
 简体中文 | [English](README_EN.MD)
 
 CommentShell(CSL)一个可以在注释中运行shell命令的intellij插件。

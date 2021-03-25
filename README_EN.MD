@@ -1,5 +1,7 @@
 # CommentShell
 
+[![release](https://img.shields.io/badge/release-1.0.0-brightgreen)](https://github.com/anqiansong/CommentShell/releases)
+
 [简体中文](README.MD) | English
 
 CommentShell (CSL) a comment shell runner, which can help developers quickly execute specified commands in files without having to type shell commands in the terminal. 
