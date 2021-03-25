@@ -23,6 +23,7 @@ import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectUtil;
 import com.intellij.openapi.util.Disposer;
 import com.intellij.openapi.vfs.CharsetToolkit;
 import com.intellij.openapi.vfs.LocalFileSystem;
@@ -93,7 +94,7 @@ public class ShellRunnerAction extends AnAction {
             BaseOSProcessHandler outputHandler = new KillableColoredProcessHandler(commandLine);
             RunContentExecutor runContentExecutor = new RunContentExecutor(project, outputHandler)
                     .withTitle(base)
-                    .withAfterCompletion(() -> LocalFileSystem.getInstance().refreshAndFindFileByPath(dir))
+                    .withAfterCompletion(() -> project.getBaseDir().refresh(false,true))
                     .withActivateToolWindow(true);
             Disposer.register(project, runContentExecutor);
             runContentExecutor.run();
