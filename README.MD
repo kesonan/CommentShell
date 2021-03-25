@@ -69,8 +69,8 @@ CommentShell(CSL)一个可以在注释中运行shell命令的intellij插件。
 ```text
 [linePrefix]x:generate [shell] [arg...] [lineSuffix]
 ```
-* linePrefix 为单行注释开始标志，仅支持`//`，`#`，`--`，`<!--`
-* lineSuffix 为单行注释结束标志，仅支持 `-->` 此为html/xml风格单行注释特有
+* `linePrefix` 为单行注释开始标志，仅支持`//`，`#`，`--`，`<!--`
+* `lineSuffix` 为单行注释结束标志，仅支持 `-->` 此为html/xml风格单行注释特有
 * `x:generate` 为关键字
 
 **注意**
@@ -100,8 +100,6 @@ CommentShell(CSL)一个可以在注释中运行shell命令的intellij插件。
     //x:generate echo $PATH
     ```
 
-## 视频演示
-<iframe height=498 width=510 src="./CSL_Record.mp4"/>
+## GIF演示
 
-
-
+![demo](./demo.gif)

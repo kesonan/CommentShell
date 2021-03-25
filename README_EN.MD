@@ -11,3 +11,101 @@ just in a single line comment Start with x:generate, and then add the shell comm
 
 For example, I expect to print `hello proto` through the shell command. 
 You can do this with a single line comment like `//x:generate echo hello proto` .
+
+## Supported languages (or files)
+
+* .gitignore
+* Antlr(g4)
+* Api(go-zero)
+* Dart
+* Dockerfile
+* Drools
+* Gherkin
+* Gradle
+* Groovy
+* Html
+* Java
+* JavaScript
+* JFlex
+* JSPX
+* Kotlin
+* Lua
+* Markdown
+* Perl
+* PHP
+* Properties
+* Proto
+* Python
+* R
+* React
+* Ruby
+* Rust
+* Scala
+* SQl
+* TypeScript
+* Vue
+* XML
+* YAML
+
+The above languages or files have been tested. In addition, as long as the programming language 
+or a certain type of file supports single-line comment grammar and specifies the single-line 
+comment type and grammar writing specification theory, it can be used (see below).
+
+## Supported Comment Style
+* Java Style
+    ```text
+    //x:generate echo hello java
+    ```
+* Yaml Style
+    ```text
+    #x:generate echo hello yaml
+    ```
+* SQL Style
+    ```text
+    --x:generate echo hello sql
+    ```
+* xml/html Style
+    ```text
+    <!--x:generate echo hello xml-->
+    ```
+## Rules
+
+### Syntax
+
+```text
+[linePrefix]x:generate [shell] [arg...] [lineSuffix]
+```
+* `linePrefix` is the start mark of single-line comment, only supported `//`，`#`，`--`，`<!--`
+* `lineSuffix` is the end mark of single-line comment, only supported `-->` which is the end comment tag in xml/html.
+* `x:generate` is keyword
+
+**NOTE**
+* There is no leading between `linePrefix` and `x:generate`.
+
+### Constant
+* `%DIR%` the directory of the target file，eg:`/foo/bar`
+* `%FILENAME%` the path of the target file，gg：`/foo/bar/foobar.txt`
+* `%PERCENT_SIGN%` the percent sign `%`
+* `"%BASE%"` the base name of the target file，eg：`foobar.txt`
+
+### Demo
+* Print `hello java` in java file
+    ```text
+    //x:generate echo hello java
+    ```
+  Output:
+    ```text
+    hello java
+    ```
+* Generate pb.go in proto file
+    ```text
+    //x:generate protoc --go_out=plugins=grpc:. %FILENAME%
+    ```
+* Print `$PATH` in java file
+    ```text
+    //x:generate echo $PATH
+    ```
+
+## GIF
+
+![demo](./demo.gif)
