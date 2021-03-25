@@ -4,8 +4,44 @@
     <vendor email="anqiansong@gmail.com" url="https://github.com/anqiansong">anqiansong</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    CommentShell (CSL) provides you to write shell commands and run them in single-line comments,
+for more usage details, please see <a href="https://github.com/anqiansong/CommentShell">github.</a><br>
+<em>Supported language and files</em>
+
+<ul>
+    <li>.gitignore</li>
+    <li>Antlr(g4)</li>
+    <li>Api(go-zero)</li>
+    <li>Dart</li>
+    <li>Dockerfile</li>
+    <li>Drools</li>
+    <li>Gherkin</li>
+    <li>Gradle</li>
+    <li>Groovy</li>
+    <li>Html</li>
+    <li>Java</li>
+    <li>JavaScript</li>
+    <li>JFlex</li>
+    <li>JSPX</li>
+    <li>Kotlin</li>
+    <li>Lua</li>
+    <li>Perl</li>
+    <li>PHP</li>
+    <li>Properties</li>
+    <li>Proto</li>
+    <li>Python</li>
+    <li>R</li>
+    <li>React</li>
+    <li>Ruby</li>
+    <li>Rust</li>
+    <li>Scala</li>
+    <li>SQl</li>
+    <li>TypeScript</li>
+    <li>Vue</li>
+    <li>XML</li>
+    <li>YAML</li>
+    and more languages which supported single-line comment
+</ul>
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
