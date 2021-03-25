@@ -1,6 +1,7 @@
 # CommentShell
 
 [![release](https://img.shields.io/badge/release-1.0.0-brightgreen)](https://github.com/anqiansong/CommentShell/releases)
+[![license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/anqiansong/CommentShell/blob/master/LICENSE)
 
 简体中文 | [English](README_EN.MD)
 
