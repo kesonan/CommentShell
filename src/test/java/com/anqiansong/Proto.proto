@@ -1,0 +1,4 @@
+syntax = "proto3";
+
+package greet;
+//x:generate echo hello proto
