@@ -13,7 +13,6 @@
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
  */
-
 package com.anqiansong.action;
 
 import com.intellij.execution.RunContentExecutor;
@@ -26,6 +25,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.Disposer;
 import com.intellij.openapi.vfs.CharsetToolkit;
+import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiElement;
 import com.anqiansong.env.Env;
@@ -63,7 +63,7 @@ public class ShellRunnerAction extends AnAction {
     private final Env env;
 
     public ShellRunnerAction(Env env) {
-        super("Run " + (env.getCmd().length() > 20 ? env.getCmd().substring(0, 20) : env.getCmd()), "Run x command", AllIcons.RunConfigurations.TestState.Run);
+        super("Run " + (env.getCmd().length() > 20 ? env.getCmd().substring(0, 20)+"..." : env.getCmd()), "Run x command", AllIcons.RunConfigurations.TestState.Run);
         this.env = env;
     }
 
@@ -93,6 +93,7 @@ public class ShellRunnerAction extends AnAction {
             BaseOSProcessHandler outputHandler = new KillableColoredProcessHandler(commandLine);
             RunContentExecutor runContentExecutor = new RunContentExecutor(project, outputHandler)
                     .withTitle(base)
+                    .withAfterCompletion(() -> LocalFileSystem.getInstance().refreshAndFindFileByPath(dir))
                     .withActivateToolWindow(true);
             Disposer.register(project, runContentExecutor);
             runContentExecutor.run();
