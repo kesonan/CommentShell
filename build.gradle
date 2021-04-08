@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.anqiansong'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
@@ -22,7 +22,13 @@ intellij {
 patchPluginXml {
     sinceBuild '193.0'
     changeNotes """
-      none"""
+      <h1>2021-04-08(v1.0.1)</h1>
+      <ul>
+        <li>Supported syntax <code>x:generate</code></li>
+        <li>To execute shell in comment</li>
+        <li>Highlight keyword <code>x:generate</code></li>
+      </ul>
+      """
 }
 test {
     useJUnitPlatform()
