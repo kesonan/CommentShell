@@ -2,7 +2,7 @@
 
 [![release](https://img.shields.io/badge/release-1.0.1-brightgreen)](https://github.com/anqiansong/CommentShell/releases)
 [![license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/anqiansong/CommentShell/blob/master/LICENSE)
-[![intellij](https://img.shields.io/badge/plugin-intellij-orange)](https://plugins.jetbrains.com/plugin/16406-commentshell)
+[![intellij](https://img.shields.io/badge/plugin-intellij-orange)](https://plugins.jetbrains.com/plugin/16474-commentshell)
 
 [简体中文](README.MD) | English
 
