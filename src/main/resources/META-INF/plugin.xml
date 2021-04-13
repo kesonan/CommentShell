@@ -18,7 +18,6 @@
     <id>com.anqiansong.CommentShell</id>
     <name>CommentShell</name>
     <vendor email="anqiansong@gmail.com" url="https://github.com/anqiansong">anqiansong</vendor>
-    <idea-version since-build="193.0" until-build="211.6"/>
     <description><![CDATA[
     CommentShell (CSL) provides you to write shell commands and run them in single-line comments,
 for more usage details, please see <a href="https://github.com/anqiansong/CommentShell">github.</a><br>
